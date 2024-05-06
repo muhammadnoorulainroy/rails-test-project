@@ -1,0 +1,15 @@
+<h3>Dear Sir!</h3>
+
+<p>
+  A new
+  <%= @book.class.to_s%> has been created. Below are the details of the object created.
+</p>
+
+<% @book.attributes.each do |attr_key, attr_val| %>
+  <p>
+    <strong> <%= attr_key %> </strong>: <%= attr_val %>
+  </p>
+<%end%>
+
+<h5>Regards</h5>
+<p>Rails Mailer</p>

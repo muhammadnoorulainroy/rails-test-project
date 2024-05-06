@@ -1,0 +1,22 @@
+<%= form_with(model: id_card, local: true) do |form| %>
+  <% if id_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(id_card.errors.count, "error") %> prohibited this id_card from being saved:</h2>
+
+      <ul>
+      <% id_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_no %>
+    <%= form.text_field :id_no %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
